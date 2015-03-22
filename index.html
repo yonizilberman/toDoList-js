@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+  </head>
+  <body>
+  	<nav>
+  		<ul id="manu">
+  			<li id="saveMyList">Save local storage</li>
+  			<li id="newListItem">New Assignment</li>
+  			<li id="editListItem">Eidt Assignment</li>
+        <li id="orderBy">
+          <span>order By</span>
+          <div>
+            <ul>
+              <li data-search="topic">Topic: <span>A - Z</span></li>
+              <li data-search="assignment">Assignment: <span>A - Z</span></li>
+              <li data-search="date">Date: <span>^</span></li>
+            </ul>
+          </div>
+        </li>
+  		</ul>
+  	</nav>
+  	<div id="wrapper">
+      <div id="newAssignment" class="popUpAssignment">
+        <a href="#" class="close">x</a>
+        <div>
+          name: <input type="text" id="newAssignmentName">
+        </div>
+        <div>
+          date: <input type="date" value="" id="newAssignmentDate">
+        </div>
+        assignment: <textarea id="newAssignmentText"></textarea>
+        <div>
+          involves With:
+        </div>
+
+        location:
+        <div class="btnDiv">
+          <div class="error"></div>
+          <button id="createBtnAssign">Done</button>
+        </div>
+      </div>
+      <div id="editAssignment" class="popUpAssignment">
+        <a href="#" class="close">x</a>
+        <div>
+          name: <input type="text" id="editAssignmentName">
+        </div>
+        <div>
+          date: <input type="date" value="" id="editAssignmentDate">
+        </div>
+        assignment: <textarea id="editAssignmentText"></textarea>
+        <div>
+          involves With:
+        </div>
+
+        location:
+        <div class="btnDiv">
+          <div class="error"></div>
+          <button id="editBtnAssign">Done</button>
+        </div>
+      </div>
+  		<div id="assignmentList">
+  		</div>
+  	</div>
+    <div id="background"></div>
+
+  	<script type="text/javascript" src="script/jquery-1.11.2.js" ></script>
+    <script type="text/javascript" src="script/jScript.js"></script>
+    <div style="display: none;">
+      <script type="text/xtemplate" id="template">
+        <div class="oneOfItem" id="number{{i}}">
+          <div class="topic">
+            <input type="checkbox" name="fname" {{checked}}>
+            <h2>{{name}}</h2>
+            <span class="date">{{date}}</span>
+          </div>
+          <div>{{assignment}}</div>
+        </div>
+      </script>
+    </div>
+  </body>
+</html>

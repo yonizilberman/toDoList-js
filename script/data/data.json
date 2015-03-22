@@ -1,0 +1,94 @@
+{
+  "toDoList" : [
+    {
+      "id" : 0,
+      "done" : "0/1",
+      "assignment" : "text",
+      "involvesWith" : "",
+      "name" : "Text",
+      "location" : "??",
+      "date" : "YYYY-MM-DD"
+    },
+    {
+      "id" : 1,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my first todo",
+      "location" : "",
+      "date" : "2014-05-27"
+    },
+    {
+      "id" : 2,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my second todo",
+      "location" : "",
+      "date" : "2013-01-31"
+    },
+    {
+      "id" : 3,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my third todo",
+      "location" : "",
+      "date" : "2015-09-07"
+    },
+    {
+      "id" : 4,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 4 todo",
+      "location" : "",
+      "date" : "2015-04-23"
+    },
+    {
+      "id" : 5,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 5 todo",
+      "location" : "",
+      "date" : "2015-11-31"
+    },
+    {
+      "id" : 6,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 6 todo",
+      "location" : "",
+      "date" : "2015-02-07"
+    },
+    {
+      "id" : 7,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 7 todo",
+      "location" : "",
+      "date" : "2015-11-31"
+    },
+    {
+      "id" : 8,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 8 todo",
+      "location" : "",
+      "date" : "2015-12-31"
+    },
+    {
+      "id" : 9,
+      "done" : false,
+      "assignment" : "what I Should do: same more text bla bla bla",
+      "involvesWith" : "",
+      "name" : "my 9 todo",
+      "location" : "",
+      "date" : "2015-11-01"
+    }
+  ]
+}

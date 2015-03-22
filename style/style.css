@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; font-family: Arial; }
+
+nav { width: 100%; background-color: #336699; color: #fff; position: fixed; z-index: 10;}
+#manu { width: 990px; height: auto; line-height: 40px; padding: 0 20px; margin: 0 auto; }
+#manu ul { list-style: none; }
+#manu li { width: 140px; display: inline-block; padding: 10px 0 10px 10px; cursor: pointer; }
+
+#background { display: none; width: 100%; height: 100%; background-color: #000; opacity: 0.7; position: fixed; z-index: 10; top: 0; }
+
+#wrapper { width: 550px; height: auto; padding-top: 60px; margin: 0 auto; background-color: #c1c1c1; position: relative; }
+
+.oneOfItem:nth-child(odd) { background-color: #515559; }
+.oneOfItem { min-height: 80px; padding: 10px; }
+.oneOfItem .topic { line-height: 30px; }
+.oneOfItem input { vertical-align: text-top; }
+.oneOfItem h2 { display: inline-block; padding: 0 10px; color: #f1f1f1; font-weight: normal; }
+.oneOfItem span { font-size: 12px; float: right; padding-right: 20px; }
+
+.popUpAssignment { display: none; width: 300px; padding: 25px 10px 10px; background-color: #f1f1f1; border: 1px solid #000; position: fixed; left: calc(50% - 150px); z-index: 50; }
+.popUpAssignment .close { float: right; margin-top: -20px; text-decoration: none; color: #000; }
+.popUpAssignment input { width: 100%; line-height: 25px; height: auto; padding: 0 5px; margin: 2px 0; box-sizing: border-box; }
+.popUpAssignment #newAssignmentDate { width: 125px; }
+.popUpAssignment #editAssignmentText,
+.popUpAssignment #newAssignmentText { width: 100%; height: 100px; padding: 5px; margin: 2px 0; font-size: 12px; box-sizing: border-box; resize: none; }
+.popUpAssignment .btnDiv { text-align: center; }
+.popUpAssignment .error { text-align: left; color: #ff0000; }
+.popUpAssignment .btnDiv  button { height: auto; line-height: 30px; width: 100px; margin-top: 10px; cursor: pointer; }
+
+.oneOfItem .editDiv { display: none; }
+.oneOfItem .editDiv.show { width: 10%; display: inline-block; }
+.oneOfItem button { background-color: #9966A3; border: 1px solid #000; width: 48px; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; }
+.oneOfItem .textAssignment { display: inline-block; width: 100%; }
+.oneOfItem .textAssignment.show { width: 90%; display: inline-block; }
+
+#manu #orderBy { padding: 0; position: relative; }
+#orderBy > span { padding: 10px 0 10px 10px; display: block; }
+#orderBy > div { display: none; background-color: #6f6f6f; border: 1px solid #000; position: absolute; top: 59px; right: 70px; }
+#orderBy > div.show { display: block; }
+#orderBy > div li { padding: 0 5px; color: #c2c2c2; }
+#orderBy > div li span { color: #fff; }
+#orderBy > div li:nth-child(3) span { display: inline-block; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+#orderBy > div li.top:nth-child(3) span { -webkit-transform: rotate(0); -moz-transform: rotate(0); -o-transform: rotate(0); transform: rotate(0); }
+
+.alertDiv { background-color: #fff; padding: 10px; border: 1px solid #000; position: fixed; top: 200px; left: calc(50% - 87px); z-index: 10; }
+
