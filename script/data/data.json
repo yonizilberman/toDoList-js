@@ -7,7 +7,8 @@
       "involvesWith" : "",
       "name" : "Text",
       "location" : "??",
-      "date" : "YYYY-MM-DD"
+      "date" : "YYYY-MM-DD",
+      "filter" : "0"
     },
     {
       "id" : 1,
@@ -16,7 +17,8 @@
       "involvesWith" : "",
       "name" : "my first todo",
       "location" : "",
-      "date" : "2014-05-27"
+      "date" : "2014-05-27",
+      "filter" : "1"
     },
     {
       "id" : 2,
@@ -25,7 +27,8 @@
       "involvesWith" : "",
       "name" : "my second todo",
       "location" : "",
-      "date" : "2013-01-31"
+      "date" : "2013-01-31",
+      "filter" : "2"
     },
     {
       "id" : 3,
@@ -34,7 +37,8 @@
       "involvesWith" : "",
       "name" : "my third todo",
       "location" : "",
-      "date" : "2015-09-07"
+      "date" : "2015-09-07",
+      "filter" : "3"
     },
     {
       "id" : 4,
@@ -43,7 +47,8 @@
       "involvesWith" : "",
       "name" : "my 4 todo",
       "location" : "",
-      "date" : "2015-04-23"
+      "date" : "2015-04-23",
+      "filter" : "4"
     },
     {
       "id" : 5,
@@ -52,7 +57,8 @@
       "involvesWith" : "",
       "name" : "my 5 todo",
       "location" : "",
-      "date" : "2015-11-31"
+      "date" : "2015-11-31",
+      "filter" : "5"
     },
     {
       "id" : 6,
@@ -61,7 +67,8 @@
       "involvesWith" : "",
       "name" : "my 6 todo",
       "location" : "",
-      "date" : "2015-02-07"
+      "date" : "2015-02-07",
+      "filter" : "6"
     },
     {
       "id" : 7,
@@ -70,7 +77,8 @@
       "involvesWith" : "",
       "name" : "my 7 todo",
       "location" : "",
-      "date" : "2015-11-31"
+      "date" : "2015-11-31",
+      "filter" : "7"
     },
     {
       "id" : 8,
@@ -79,7 +87,8 @@
       "involvesWith" : "",
       "name" : "my 8 todo",
       "location" : "",
-      "date" : "2015-12-31"
+      "date" : "2015-12-31",
+      "filter" : "8"
     },
     {
       "id" : 9,
@@ -88,7 +97,8 @@
       "involvesWith" : "",
       "name" : "my 9 todo",
       "location" : "",
-      "date" : "2015-11-01"
+      "date" : "2015-11-01",
+      "filter" : "9"
     }
   ]
 }

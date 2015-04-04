@@ -1,6 +1,7 @@
-'use strict';
+
 
 (function(){
+  "use strict";
     var popUp,
         thisDate = new Date(),
         thisTime,
@@ -17,7 +18,8 @@
             editAssignmentName: $('#editAssignmentName'),
             editAssignmentText: $('#editAssignmentText'),
             editAssignmentDate: $('#editAssignmentDate'),
-            background: $('#background')
+            background: $('#background'),
+            closePopup: $('.popUpAssignment .close')
         },
     	init: function () {
             if( localStorage.getItem('index0') !== null ) { 
@@ -44,8 +46,9 @@
                 if (localStorage.getItem('index' + i) !== "undefined") {
                     var space = 1 === (localStorage.length -1) ? '' : ',';
                     myListDB += localStorage.getItem('index' + i) + space;
-                };
-            };
+                }
+            }
+            console.log();
             myListDB = eval('{ [' + myListDB+ '] }');
 
             toDomyList.allDOMlist();
@@ -75,12 +78,12 @@
             var loopLength = '';
             for (var i = myListDB.length - 1; i >= 0; i--) {
                 loopLength += " " + i;
-            };
+            }
             console.log('number of:', loopLength);
             $.each(myListDB, function(i, item){
 
                 if ( i !== 0 ) {
-                    toDomyList.itemHTML(i, item);
+                    toDomyList.itemHTMLTemplate(i, item);
                 }
                 // $('#assignmentList').html($('#template'));
                 // you need the templte!!!!!
@@ -91,7 +94,6 @@
                 input = '<input type="checkbox" name="fname" ' + checked + '>',
                 chore = '<h2>' + item.name + '</h2>',
                 choreDate = '<span class="date">' + item.date + '</span>';
-
             $('#assignmentList').append( 
                 $("<div>", { 
                     'class': 'oneOfItem', 
@@ -107,6 +109,18 @@
                     '<div class="topic">' + input + chore + choreDate + '</div>' + 
                     '<div>' + item.assignment + '</div>' + 
                 '</div>' );
+        },
+        itemHTMLTemplate: function (i, item){
+            var checked = item.done ? 'checked' : '',
+                input = '<input type="checkbox" name="fname" ' + checked + '>',
+                chore = '<h2>' + item.name + '</h2>',
+                choreDate = '<span class="date">' + item.date + '</span>',
+            itemTemplete = $('#itemTemplate').html().replace(/{{i}}/g, i)
+                              .replace(/{{input}}/g, input)
+                              .replace(/{{chore}}/g, chore)
+                              .replace(/{{choreDate}}/g, choreDate)
+                              .replace(/{{assignment}}/g, item.assignment);
+                              $('#assignmentList').append(itemTemplete);
         },
         itemID: function(){
             if( localStorage.getItem('index0') !== null ) { 
@@ -128,13 +142,15 @@
             backgroundCloseFunction();
         });
     }
-    function backgroundClose(e) {
+    function backgroundClose() {
         backgroundCloseFunction();
     }
     function backgroundCloseFunction() {
-        if ( this.nodeName === 'A' ) { e.preventDefault(); }
-        $('.popUpAssignment .error').html('');
-        $('#background, ' + popUp).hide();
+      if ( toDomyList.dom.closePopup.nodeName === 'A' ) {
+        e.preventDefault();
+      }
+      $('.popUpAssignment .error').html('');
+      $('#background, ' + popUp).hide();
     }
     function newListitem(){
         var month = thisDate.getMonth() >= 10 ? thisDate.getMonth() : 
@@ -163,9 +179,10 @@
                     assignment:   toDomyList.dom.newAssignmentText.val(),
                     done:         false,
                     involvesWith: "",
-                    location:     ""
+                    location:     "",
+                    filter : ""
                 };
-                toDomyList.itemHTML(myListDB.length, newListObj);
+                toDomyList.itemHTMLTemplate(myListDB.length, newListObj);
                 $('#newAssignment input[type="text"], #newAssignment textarea').val('');
 
                 myListDB.push(newListObj);
@@ -256,15 +273,15 @@
                 console.log(i);
                 var tmp = myListDB[i];
                 localStorage.setItem('index' + i, JSON.stringify(tmp));
-            };
-            console.log('number of:', loopLength);
+            }
+            console.log('number of: ', loopLength);
         } else {
             alertMessage('Sorry! No Web Storage support..', 2000);
         }
     }
     function alertMessage(text, time){
         time = time || 1000;
-        text = text || 'default text'
+        text = text || 'default text';
 
         $('.close').parent().hide();
         toDomyList.dom.background.show();
@@ -282,9 +299,13 @@
         
         $('#orderBy li:nth-child(1), #orderBy li:nth-child(2)').on('click', function(){ 
             var text = $(this).children('span');
-            text.text() === "A - Z" ? text.text("Z - A") : text.text("A - Z");
+            if (text.text() === "A - Z") { 
+              text.text("Z - A");
+            } else { 
+              text.text("A - Z");
+            }
             console.log($(this).text());
-            domFilter(this);
+            // domFilter(this);
         });
 
         $('#orderBy li').eq('2').on('click', function(){
@@ -293,9 +314,14 @@
         });
         function domFilter (a){
             console.log('filter: ', $(a).data('search'));
+            var tmp = [];
             for (var i = myListDB.length - 1; i > 0; i--) {
-                console.log(myListDB[i].date.split('-').join().replace(/,/g,''));
-            };
+              
+                tmp[i] = myListDB[i].date.split('-').join().replace(/,/g,'');
+            }
+            console.log(tmp.sort());
+            
+            
         }
     }
 

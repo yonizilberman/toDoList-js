@@ -1,3 +1,4 @@
+<!DOCTYPE HTML5>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -67,14 +68,16 @@
   	<script type="text/javascript" src="script/jquery-1.11.2.js" ></script>
     <script type="text/javascript" src="script/jScript.js"></script>
     <div style="display: none;">
-      <script type="text/xtemplate" id="template">
+      <script type="text/xtemplate" id="itemTemplate">
         <div class="oneOfItem" id="number{{i}}">
-          <div class="topic">
-            <input type="checkbox" name="fname" {{checked}}>
-            <h2>{{name}}</h2>
-            <span class="date">{{date}}</span>
+          <div class="editDiv">
+              <button class="btnEdit" data-edit="{{i}}">Edit</button>
+              <button class="btnDelete" data-delete="{{i}}">del</button>
           </div>
-          <div>{{assignment}}</div>
+          <div class="textAssignment">
+              <div class="topic">{{input}} {{chore}} {{choreDate}}</div>
+              <div>{{assignment}}</div>
+          </div>
         </div>
       </script>
     </div>

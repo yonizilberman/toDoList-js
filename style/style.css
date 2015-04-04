@@ -30,7 +30,7 @@ nav { width: 100%; background-color: #336699; color: #fff; position: fixed; z-in
 .oneOfItem .editDiv.show { width: 10%; display: inline-block; }
 .oneOfItem button { background-color: #9966A3; border: 1px solid #000; width: 48px; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; }
 .oneOfItem .textAssignment { display: inline-block; width: 100%; }
-.oneOfItem .textAssignment.show { width: 90%; display: inline-block; }
+.oneOfItem .textAssignment.show { width: 89%; display: inline-block; }
 
 #manu #orderBy { padding: 0; position: relative; }
 #orderBy > span { padding: 10px 0 10px 10px; display: block; }
