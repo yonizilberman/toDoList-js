@@ -270,9 +270,9 @@
             var loopLength = '';
             for (var i = 0; i < myListDB.length; i++) {
                 loopLength += ' ' + i;
-                console.log(i);
                 var tmp = myListDB[i];
                 localStorage.setItem('index' + i, JSON.stringify(tmp));
+                alertMessage('LocalStorage To this brawser done seccsesfull!!', 2000);
             }
             console.log('number of: ', loopLength);
         } else {
